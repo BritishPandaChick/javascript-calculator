@@ -4,8 +4,6 @@
     <meta charset="UTF-8">
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="text-center">
@@ -14,33 +12,38 @@
     </header>
 
     <main>
-      <div class="text-center" id="calculator">
-      <div class="calculator__display" id="display">0</div>
-      <div class="calculator__keys">
-        <button class="btn btn-primary key--operator" data-action="divide" id="divide">/</button>
-        <button class="btn btn-primary key--operator" data-action="multiply" id="multiply">*</button>
-        <button class="btn btn-primary key--operator" data-action="subtract" id="subtract">-</button>
-        <button class="btn btn-primary key--operator" data-action="add" id="add">+</button>
-      <br/>
-        <button class="btn btn-primary" id="seven">7</button>
-        <button class="btn btn-primary" id="eight">8</button>
-        <button class="btn btn-primary" id="nine">9</button>
-      <br/>
-        <button class="btn btn-primary" id="four">4</button>
-        <button class="btn btn-primary" id="five">5</button>
-        <button class="btn btn-primary" id="six">6</button>
-      <br/>
-        <button class="btn btn-primary" id="one">1</button>
-        <button class="btn btn-primary" id="two">2</button>
-        <button class="btn btn-primary" id="three">3</button>
-      <br/>
-        <button class="btn btn-primary" id="zero">0</button>
-        <button class="btn btn-primary" data-action="decimal" id="decimal">.</button>
-        <button class="btn btn-danger" data-action="clear" id="clear">AC</button>
-        <button class="btn btn-primary bigButton key--equal" data-action="equals" id="equals">=</button>
-      </div>
+      <div id="calculator">
+        <input type="text" id="display" disabled>
+        <br/>
 
-     </div>
+        <input type="button" value="C" class="keys" onclick="addtoScreen("c")">
+        <input type="button" value="CE" class="keys" id="clear" onclick="backspace()">
+        <input type="button" value="x^2" class="keys" onclick="power()">
+        <input type="button" value="+" class="keys" id="add" onclick="addtoScreen("+")">
+        <br/>
+
+        <input type="button" value="7" class="keys" id="seven" onclick="addtoScreen("7")">
+        <input type="button" value="8" class="keys" id="eight" onclick="addtoScreen("8")">
+        <input type="button" value="9" class="keys" id="nine" onclick="addtoScreen("9")">
+        <input type="button" value="-" class="keys" id="subtract" onclick="addtoScreen("-")">
+        <br/>
+
+        <input type="button" value="4" class="keys" id="four" onclick="addtoScreen("4")">
+        <input type="button" value="5" class="keys" id="five" onclick="addtoScreen("5")">
+        <input type="button" value="6" class="keys" id="six" onclick="addtoScreen("6")">
+        <input type="button" value="*" class="keys" id="multiply" onclick="addtoScreen("*")">
+        <br/>
+
+        <input type="button" value="1" class="keys" id="one" onclick="addtoScreen("1")">
+        <input type="button" value="2" class="keys" id="two" onclick="addtoScreen("2")">
+        <input type="button" value="3" class="keys" id="three" onclick="addtoScreen("3")">
+        <input type="button" value="/" class="keys" id="divide" onclick="addtoScreen("/")">
+        <br/>
+
+        <input type="button" value="0" class="keys" id="zero" onclick="addtoScreen("0")">
+        <input type="button" value="." class="keys" id="decimal" onclick="addtoScreen(".")">
+        <input type="button" value="=" id="equals" onclick="equal()">
+      </div>
     </main>
 
     <footer>
@@ -48,7 +51,6 @@
     </footer>
 
     <script type="text/javascript" src="assets/js/script.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
   </body>
 
