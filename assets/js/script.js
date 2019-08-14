@@ -1,5 +1,3 @@
-//https://www.youtube.com/watch?v=POv394EKTjU&list=PLcwcsiRRNFZVH-i-hXvZ0gja8OwCAQw2g&index=3
-
 //Global Variables
 var box = document.getElementById("display");
 
