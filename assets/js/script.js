@@ -24,4 +24,7 @@ function power(){
 
 function backspace(){
   var num = box.value;
+  var len = num.length-1;
+  var newNum = num.substring(0,len);
+  box.value = newNum;
 }
