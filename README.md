@@ -9,3 +9,5 @@ This repository is the starter code featured in Dylan Israel's YouTube videos. T
 
 ## Acknowledgements
 * Dylan Israel
+* Martin Snow
+* Free Code Camp 

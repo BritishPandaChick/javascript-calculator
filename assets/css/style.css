@@ -42,3 +42,7 @@ body {
   border-radius: 2px;
   outline: none;
 }
+
+footer {
+  text-align: left;
+}
