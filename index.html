@@ -3,6 +3,8 @@
   <head>
     <title>JavaScript Calculator</title>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   </head>
   <body>
     <header class="text-center">
@@ -12,45 +14,47 @@
 
     <main>
       <div id="calculator">
-        <input type="text" id="display" disabled>
-        <br/>
+        <div id="display">0</div>
+        <div class="row">
+          <button class="keys" data-key="67" id="clear" onclick="clearDisplay()">C</button>
+          <button class="keys" data-key="69" onclick="backspace()">CE</button>
+          <button class="keys" data-key="221" id="add" onclick="addtoScreen()">+</button>
+          <button class="keys" data-key="189" id="subtract" onclick="addtoScreen()">-</button>
+        </div>
 
-        <input type="button" value="C" class="keys" id="clear" onclick='addtoScreen("c")'>
-        <input type="button" value="CE" class="keys" onclick="backspace()">
-        <input type="button" value="x^2" class="keys" onclick="power()">
-        <input type="button" value="+" class="keys" id="add" onclick='addtoScreen("+")'>
-        <br/>
+        <div class="row">
+          <button class="keys" data-key="55" id="seven" onclick="addtoScreen()">7</button>
+          <button class="keys" data-key="56" id="eight" onclick="addtoScreen()">8</button>
+          <button class="keys" data-key="57" id="nine" onclick="addtoScreen()">9</button>
+          <button class="keys" data-key="56" id="multiply" onclick="addtoScreen()">*</button>
+        </div>
 
-        <input type="button" value="7" class="keys" id="seven" onclick='addtoScreen("7")'>
-        <input type="button" value="8" class="keys" id="eight" onclick='addtoScreen("8")'>
-        <input type="button" value="9" class="keys" id="nine" onclick='addtoScreen("9")'>
-        <input type="button" value="-" class="keys" id="subtract" onclick='addtoScreen("-")'>
-        <br/>
+        <div class="row">
+          <button class="keys" data-key="52" id="four" onclick="addtoScreen()">4</button>
+          <button class="keys" data-key="53" id="five" onclick="addtoScreen()">5</button>
+          <button class="keys" data-key="54" id="six" onclick="addtoScreen()">6</button>
+          <button class="keys" data-key="191" id="divide" onclick="addtoScreen()">/</button>
+        </div>
 
-        <input type="button" value="4" class="keys" id="four" onclick='addtoScreen("4")'>
-        <input type="button" value="5" class="keys" id="five" onclick='addtoScreen("5")'>
-        <input type="button" value="6" class="keys" id="six" onclick='addtoScreen("6")'>
-        <input type="button" value="*" class="keys" id="multiply" onclick='addtoScreen("*")'>
-        <br/>
+        <div class="row">
+          <button class="keys" data-key="49" id="one" onclick="addtoScreen()">1</button>
+          <button class="keys" data-key="50" id="two" onclick="addtoScreen()">2</button>
+          <button class="keys" data-key="51" id="three" onclick="addtoScreen()">3</button>
+          <button class="keys" data-key="190" id="decimal" onclick="addtoScreen()">.</button>
+        </div>
 
-        <input type="button" value="1" class="keys" id="one" onclick='addtoScreen("1")'>
-        <input type="button" value="2" class="keys" id="two" onclick='addtoScreen("2")'>
-        <input type="button" value="3" class="keys" id="three" onclick='addtoScreen("3")'>
-        <input type="button" value="/" class="keys" id="divide" onclick='addtoScreen("/")'>
-        <br/>
-
-        <input type="button" value="0" class="keys" id="zero" onclick='addtoScreen("0")'>
-        <input type="button" value="." class="keys" id="decimal" onclick='addtoScreen(".")'>
-        <input type="button" value="=" id="equals" onclick="answer()">
-      </div>
+        <div class="row">
+          <button class="keys" data-key="48" id="zero" onclick="addtoScreen()">0</button>
+          <button class="keys" data-key="187" id="equals" onclick="answer()">=</button>
+        </div>
     </main>
 
     <footer>
       <p>&copy; 2019 Sarah Bartley. All Rights Reserved.</p>
     </footer>
 
-    <script type="text/javascript" src="assets/js/script.js"></script>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <script type="text/javascript" src="assets/js/script.js"></script>
   </body>
 
 </html>

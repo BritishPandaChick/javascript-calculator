@@ -1,13 +1,14 @@
 # JavaScript Calculator
-Free Code Camp Advanced Front End Development Project JavaScript Calculator. Made with HTML, CSS, and JavaScript.
+Free Code Camp Advanced Front End Development Project JavaScript Calculator. Made with HTML, CSS, JavaScript and jQuery.
 
 ## Instructions
-Clone or download zip file. Open index.html file in your browser.
+Clone or download zip file. Open index.html file in your browser. Press the calculator buttons to start doing math calculations.
 
 ## Contributing
-This repository is the starter code featured in Dylan Israel's YouTube videos. Therefore, we most likely will not accept pull requests.
+This repository is based on code from different developers via YouTube and CodePen files. Therefore, I will not accept pull requests.
 
 ## Acknowledgements
 * Dylan Israel
 * Martin Snow
-* Free Code Camp 
+* Claire Southwell
+* Free Code Camp
