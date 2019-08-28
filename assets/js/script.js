@@ -1,95 +1,91 @@
 //Global Variables
-const display = document.getElementById('display');
-let numArray = [];
+const calculatorDisplay = document.getElementById('display');
+let numsArray = [];
 
-// Clear calculator display
-function clearDisplay() {
-  display.innerHTML = 0;
-  numArray = [];
+// Clears entire calculator
+clearCalculator = () => {
+  calculatorDisplay.innerHTML = 0;
+  numsArray = [];
 }
 
 // Deletes one letter
-function backspace(){
+backspace => () => {
   //console.log('backspace');
-  if (numArray.length > 0) {
-    numArray.pop();
-  }
-  let numString = numArray.join('');
-  display.innerHTML = numString;
+  if (numsArray.length > 0) numsArray.pop();
+
+  let numString = numsArray.join('');
+  calculatorDisplay.innerHTML = numString;
 }
 
-//Tests for multiple zeroes, decimals and operators
-function numTests(){
+//Checkfor multiple zeroes, decimals and operators
+calculatorTests = () => {
   //test for multiple zeroes
-  if (numArray[0] == '0' && numArray[1] == "0") {
-    numArray.shift();
-  }
+  if (numsArray[0] == '0' && numsArray[1] == "0") numsArray.shift();
 
   /* Checks for 2 operators */
   //Checks to see if this operator is not an minus sign
-  let x = numArray.length - 1;
+  let x = numsArray.length - 1;
   let xRegex = /\/|\*|\+/;
-  let xTest = xRegex.test(numArray[x]);
+  let xTest = xRegex.test(numsArray[x]);
   console.log('xTest' + xTest);
 
   //Checks all operators
-  var h = numArray.length - 2;
+  var h = numsArray.length - 2;
   var hRegex = /\/|\*|\+|\-/;
-  var hTest = hRegex.test(numArray[h]);
+  var hTest = hRegex.test(numsArray[h]);
   console.log('hTest' + hTest);
 
-  let y = numArray.length - 3;
+  let y = numsArray.length - 3;
   let yRegex = hRegex;
-  let yTest = yRegex.test(numArray[y]);
+  let yTest = yRegex.test(numsArray[y]);
   console.log('yTest' + yTest);
 
   if(xTest) {
     if(hTest) {
       if(yTest){
-        numArray.splice(y, 2);
+        numsArray.splice(y, 2);
       } else {
-        numArray.splice(h, 1);
+        numsArray.splice(h, 1);
       }
     }
   }
 
   //Looks for multiple decimals
-  let testNums = numArray.join('');
+  let testNums = numsArray.join('');
   let decimal = /\.\d*\./;
   if (decimal.test(testNums)){
     rightString = testNums.slice(0, testNums.length-1);
     rightArray = rightString.split('');
-    numArray = rightArray;
+    numsArray = rightArray;
   }
 }
 
-//adds to screen
-function addtoScreen(e){
-  let next = event.target.textContent;
-  numArray.push(next);
-  numTests();
-  let numString = numArray.join('');
-  display.innerHTML = numString;
+//Gets key data to appear on the screen
+addtoScreen = (e) => {
+  let nextNum = event.target.textContent;
+  numsArray.push(nextNum);
+  calculatorTests();
+  let numString = numsArray.join('');
+  calculatorDisplay.innerHTML = numString;
   return numString;
 }
 
 //Finds answer for calculator
 function answer(){
-  const displayValue = document.getElementById("display").innerHTML;
-  result = eval(displayValue);
-  display.textContent = result;
-  numArray = [result];
-  //console.log(displayValue);
+  const calcDisplayValue = document.getElementById('display').innerHTML;
+  result = eval(calcDisplayValue);
+  calculatorDisplay.textContent = result;
+  numsArray = [result];
 }
 
-// Keyboard functionality for data-keys
+// Gets the data-keys to work so they show on calculator display
 let keyPressed = false;
 
 $(window).keydown(function(e){
   let input;
   //return if clear button pressed
   if(e.which == 67){
-    clearDisplay();
+    clearCalculator();
     return;
   }
   //if backspace pressed return
@@ -97,7 +93,7 @@ $(window).keydown(function(e){
     backspace();
     return;
   }
-  //if shift is pressed
+  //checks to see if keyPressed is true or false in order to keep working
   if (e.which == 16) {
     keyPressed = true;
   }
@@ -112,10 +108,9 @@ $(window).keydown(function(e){
     switch(e.which){
       case 187:
         const equation = document.getElementById('display').textContent;
-        //console.log(equation);
         answer = eval(equation);
-        display.textContent(answer);
-        numArray = [answer];
+        calculatorDisplay.textContent(answer);
+        numsArray = [answer];
         break;
       case 191:
         input = '/';
@@ -157,14 +152,14 @@ $(window).keydown(function(e){
   }
 
   //Push to numArray
-  numArray.push(input);
-  //console.log(numArray);
-  numTests();
+  numsArray.push(input);
+  calculatorTests();
+
   //return array join into a string
-  let numString = numArray.join('');
+  let numString = numsArray.join('');
 
   //Check for operators that came before other operators
-  display.innerHTML = numString;
+  calculatorDisplay.innerHTML = numString;
   return numString;
 });
 

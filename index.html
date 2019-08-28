@@ -15,38 +15,41 @@
     <main>
       <div id="calculator">
         <div id="display">0</div>
-        <div class="row">
-          <button class="keys" data-key="67" id="clear" onclick="clearDisplay()">C</button>
-          <button class="keys" data-key="69" onclick="backspace()">CE</button>
-          <button class="keys" data-key="221" id="add" onclick="addtoScreen()">+</button>
-          <button class="keys" data-key="189" id="subtract" onclick="addtoScreen()">-</button>
-        </div>
+        <div class="buttons">
+          <div class="row">
+            <button class="key" data-key="67" id="clear" onclick="clearCalculator()">C</button>
+            <button class="key" data-key="69" onclick="backspace()">CE</button>
+            <button class="key" data-key="221" id="add" onclick="addtoScreen()">+</button>
+            <button class="key" data-key="189" id="subtract" onclick="addtoScreen()">-</button>
+          </div>
 
-        <div class="row">
-          <button class="keys" data-key="55" id="seven" onclick="addtoScreen()">7</button>
-          <button class="keys" data-key="56" id="eight" onclick="addtoScreen()">8</button>
-          <button class="keys" data-key="57" id="nine" onclick="addtoScreen()">9</button>
-          <button class="keys" data-key="56" id="multiply" onclick="addtoScreen()">*</button>
-        </div>
+          <div class="row">
+            <button class="key" data-key="55" id="seven" onclick="addtoScreen()">7</button>
+            <button class="key" data-key="56" id="eight" onclick="addtoScreen()">8</button>
+            <button class="key" data-key="57" id="nine" onclick="addtoScreen()">9</button>
+            <button class="key" data-key="56" id="multiply" onclick="addtoScreen()">*</button>
+          </div>
 
-        <div class="row">
-          <button class="keys" data-key="52" id="four" onclick="addtoScreen()">4</button>
-          <button class="keys" data-key="53" id="five" onclick="addtoScreen()">5</button>
-          <button class="keys" data-key="54" id="six" onclick="addtoScreen()">6</button>
-          <button class="keys" data-key="191" id="divide" onclick="addtoScreen()">/</button>
-        </div>
+          <div class="row">
+            <button class="key" data-key="52" id="four" onclick="addtoScreen()">4</button>
+            <button class="key" data-key="53" id="five" onclick="addtoScreen()">5</button>
+            <button class="key" data-key="54" id="six" onclick="addtoScreen()">6</button>
+            <button class="key" data-key="191" id="divide" onclick="addtoScreen()">/</button>
+          </div>
 
-        <div class="row">
-          <button class="keys" data-key="49" id="one" onclick="addtoScreen()">1</button>
-          <button class="keys" data-key="50" id="two" onclick="addtoScreen()">2</button>
-          <button class="keys" data-key="51" id="three" onclick="addtoScreen()">3</button>
-          <button class="keys" data-key="190" id="decimal" onclick="addtoScreen()">.</button>
-        </div>
+          <div class="row">
+            <button class="key" data-key="49" id="one" onclick="addtoScreen()">1</button>
+            <button class="key" data-key="50" id="two" onclick="addtoScreen()">2</button>
+            <button class="key" data-key="51" id="three" onclick="addtoScreen()">3</button>
+            <button class="key" data-key="190" id="decimal" onclick="addtoScreen()">.</button>
+          </div>
 
-        <div class="row">
-          <button class="keys" data-key="48" id="zero" onclick="addtoScreen()">0</button>
-          <button class="keys" data-key="187" id="equals" onclick="answer()">=</button>
+          <div class="row">
+            <button class="key" data-key="48" id="zero" onclick="addtoScreen()">0</button>
+            <button class="key" data-key="187" id="equals" onclick="answer()">=</button>
+          </div>
         </div>
+      </div>
     </main>
 
     <footer>
