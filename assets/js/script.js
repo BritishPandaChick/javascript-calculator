@@ -65,6 +65,7 @@ showValue = (e) => {
   let keyNum = event.target.textContent;
   numsArray.push(keyNum);
   testingCalculator();
+
   let numString = numsArray.join('');
   calculatorDisplay.innerHTML = numString;
   return numString;
@@ -93,9 +94,8 @@ $(window).keydown(function(e){
     return;
   }
   //checks to see if keyPressed is true or false in order to keep working
-  if (e.which == 16) {
-    keyPressed = true;
-  }
+  if (e.which == 16) keyPressed = true;
+
 
   if (keyPressed == true) {
     if (e.which == 187) {
@@ -163,7 +163,5 @@ $(window).keydown(function(e){
 });
 
 $(window).keyup(function(e){
-  if(e.which == 16){
-    keyPressed = false;
-  }
+  if(e.which == 16) keyPressed = false;
 });
