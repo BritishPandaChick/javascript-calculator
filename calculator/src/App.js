@@ -34,11 +34,15 @@ function App() {
     const lastElement = array[array.length - 1];
 
     //Checks last number to see if it includes a decimal.
-    if (!lastElement.includes('.') &&
-      (typeof parseInt(lastElement) === 'number')) {
+    if (!lastElement.includes('.')) {
       setDisplay(display + '.');
     }
   };
+
+  //Handle clear button to clear screen
+  const handleClear = () => {
+    setDisplay('0');
+  }
 
   return (
     <div className="App">
@@ -46,7 +50,7 @@ function App() {
         <div id="display" className="row">
           {display}
         </div>
-        <div id="clear" className="row">
+        <div id="clear" className="row" onClick={handleClear}>
           AC
         </div>
 
