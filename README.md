@@ -8,7 +8,7 @@ freecodecamp Frontend Libraries project. JavaScript Calculator.
 * React
 
 ## Instructions
-Clone or download zip file. Go to your terminal and cd into calculator. Run ```npm start``` to start the app. Type numbers and symbols on the calculator to get the answer.
+Clone or download zip file. Go to your terminal and cd into calculator directory. Run ```npm start``` to start the app. Type numbers and symbols on the calculator. Press the equals button to get your answer.
 
 ## Contributing
 This repository is based on code from the create-react-app and K-dev's drum machine tutorial. Therefore, I will not accept pull requests.
