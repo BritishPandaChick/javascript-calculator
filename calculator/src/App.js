@@ -52,72 +52,82 @@ function App() {
         </div>
 
         <div className="buttons">
-          <div className="row"></div>
-          <div id="clear" className="key" onClick={handleClear}>
-            AC
+          <div className="row">
+            <div id="clear" className="key" onClick={handleClear}>
+              AC
+            </div>
+
+            <div id="subtract" className="key" onClick={handleOperator}>
+              -
+            </div>
+
+            <div id="add" className="key" onClick={handleOperator}>
+              +
+            </div>
           </div>
 
-          <div id="seven" className="key" onClick={handleNumber}>
-            7
+          <div className="row">
+            <div id="seven" className="key" onClick={handleNumber}>
+              7
+            </div>
+
+            <div id="eight" className="key" onClick={handleNumber}>
+              8
+            </div>
+
+            <div id="nine" className="key" onClick={handleNumber}>
+              9
+            </div>
+
+            <div id="multiply" className="key" onClick={handleOperator}>
+              *
+            </div>
           </div>
 
-          <div id="eight" className="key" onClick={handleNumber}>
-            8
+          <div className="row">
+            <div id="four" className="key" onClick={handleNumber}>
+              4
+            </div>
+
+            <div id="five" className="key" onClick={handleNumber}>
+              5
+            </div>
+
+            <div id="six" className="key" onClick={handleNumber}>
+              6
+            </div>
+
+            <div id="divide" className="key" onClick={handleOperator}>
+              /
+            </div>
           </div>
 
-          <div id="nine" className="key" onClick={handleNumber}>
-            9
+          <div className="row">
+            <div id="one" className="key" onClick={handleNumber}>
+              1
+            </div>
+
+            <div id="two" className="key" onClick={handleNumber}>
+              2
+            </div>
+
+            <div id="three" className="key" onClick={handleNumber}>
+              3
+            </div>
+
+            <div id="decimal" className="key" onClick={handleDecimal}>
+              .
+            </div>
           </div>
 
-          <div id="multiply" className="key" onClick={handleOperator}>
-            *
-          </div>
+          <div class="row">
+            <div id="zero" className="key" onClick={handleNumber}>
+              0
+            </div>
 
-          <div id="four" className="key" onClick={handleNumber}>
-            4
-          </div>
-
-          <div id="five" className="key" onClick={handleNumber}>
-            5
-          </div>
-
-          <div id="six" className="key" onClick={handleNumber}>
-            6
-          </div>
-
-          <div id="divide" className="key" onClick={handleOperator}>
-            /
-          </div>
-
-          <div id="one" className="key" onClick={handleNumber}>
-            1
-          </div>
-
-          <div id="two" className="key" onClick={handleNumber}>
-            2
-          </div>
-
-          <div id="three" className="key" onClick={handleNumber}>
-            3
-          </div>
-
-          <div id="add" className="key" onClick={handleOperator}>
-            +
-          </div>
-
-          <div id="zero" className="key" onClick={handleNumber}>
-            0
-          </div>
-
-          <div id="decimal" className="key" onClick={handleDecimal}>
-            .
-          </div>
-          <div id="equals" className="key" onClick={handleEqual}>
-            =
-          </div>
-
-          <div id="subtract" className="key" onClick={handleOperator}>
-            -
+            <div id="equals" className="key" onClick={handleEqual}>
+              =
+            </div>
           </div>
         </div>
       </div>
