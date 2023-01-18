@@ -1,0 +1,100 @@
+/* === Base Styles ===*/
+body {
+  margin: 0 auto;
+  width: 100%;
+  font-family: "Open Sans", sans-serif;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/*== Header ==*/
+header {
+  padding: 20px 40px;
+  background-color: #710627;
+}
+
+header h1 {
+  font-size: 55px;
+  font-family: "Lobster Two", cursive;
+  color: #fff;
+}
+
+header p {
+  line-height: 32px;
+  font-size: 20px;
+  color: #fff;
+}
+
+/* === Root styles ===*/
+.calculator {
+  background-color: darkblue;
+  width: 240px;
+  height: 335px;
+  padding: 20px;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+
+#display {
+  margin: 17px 0;
+  height: 30px;
+  width: 200px;
+  padding-right: 10px;
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: darkgray;
+}
+
+.buttons {
+  margin: 13px;
+}
+
+.key {
+  width: 41px;
+  height: 35px;
+  margin: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  color: darkblue;
+  font-weight: bold;
+}
+
+#clear {
+  text-align: center;
+  width: 90px;
+  height: 35px;
+  margin: 4px;
+  border-radius: 2px;
+}
+
+#add,
+#subtract,
+#multiply,
+#divide {
+  background-color: red;
+  border: 1px solid red;
+  color: #fff;
+}
+
+#equals {
+  width: 140px;
+  height: 35px;
+  margin: 4px;
+  border-radius: 2px;
+  background-color: red;
+  border: 1px solid red;
+  color: #fff;
+  text-align: center;
+}
+
+/*== Footer ==*/
+footer {
+  padding: 5px;
+  font-size: 16px;
+  background-color: #710627;
+  color: #fff;
+  margin-top: 15px;
+}
